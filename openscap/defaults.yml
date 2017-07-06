@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+# Defaults for openscap
+
+openscap:
+  enabled: false
+  service:
+    name: oscap
+    enable: false
+    state: dead
