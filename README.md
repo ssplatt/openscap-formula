@@ -1,4 +1,5 @@
 # openscap-formula
+[![Build Status](https://travis-ci.org/ssplatt/openscap-formula.svg?branch=master)](https://travis-ci.org/ssplatt/openscap-formula)
 
 Install and manage OpenSCAP
 
