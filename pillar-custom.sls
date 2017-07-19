@@ -4,4 +4,5 @@
 
 openscap:
   enabled: True
-  pkg: libopenscap8
+  mockup: true
+  policy_server: true

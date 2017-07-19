@@ -3,8 +3,6 @@
 ---
 driver:
   name: vagrant
-  customize: 
-    memory: 1024
 
 provisioner:
   name: salt_solo
@@ -13,19 +11,24 @@ provisioner:
     base:
       "*":
         - openscap
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - openscap
 
 platforms:
-  - name: bento/debian-8.2
+  - name: bento/debian-8.8
 
 suites:
   - name: default
+    provisioner:
+      pillars:
+        openscap.sls:
+          openscap:
+            enabled: true
 
   - name: custom
     provisioner:
       pillars-from-files:
         openscap.sls: pillar-custom.sls
-      pillars:
-        top.sls:
-          base:
-            "*":
-              - openscap

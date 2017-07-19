@@ -4,6 +4,10 @@
 
 openscap:
   enabled: false
+  mockup: false
+  policy_server: false
+  pkg: libopenscap8
+  policy_server_pkg: ssg-debian
   service:
     name: oscap
     enable: false

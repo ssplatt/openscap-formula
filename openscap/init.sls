@@ -6,6 +6,9 @@
 {# Below is an example of having a toggle for the state #}
 {% if openscap.enabled %}
 include:
+  {% if openscap.mockup -%}
+  - openscap.mockup
+  {%- endif %}
   - openscap.install
   - openscap.config
   - openscap.service
