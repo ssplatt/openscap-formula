@@ -6,3 +6,12 @@
 openscap_pkg:
   pkg.installed:
     - name: {{ openscap.pkg }}
+
+{% if openscap.policy_server %}
+# requires sid repository enabled
+# https://packages.debian.org/sid/ssg-debian
+
+openscap_policy_server_pkg:
+  pkg.installed:
+    - name: {{ openscap.policy_server_pkg }}
+{% endif %}

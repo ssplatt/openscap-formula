@@ -1,10 +1,9 @@
 # openscap-formula
 
-Purpose of formula. Include a short description of what the formula does.
+Install and manage OpenSCAP
 
-## Available states
-
-Describe in a readable form the states this formula supports with examples how to use those states. 
+ - https://www.open-scap.org/
+ - https://wiki.debian.org/UsingSCAP
 
 ## How to use test-kitchen on MacOSX
 

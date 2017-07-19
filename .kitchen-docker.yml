@@ -3,6 +3,7 @@
 ---
 driver:
   name: docker
+  image: debian:8
 
 provisioner:
   name: salt_solo
@@ -11,19 +12,24 @@ provisioner:
     base:
       "*":
         - openscap
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - openscap
 
 platforms:
-  - name: debian-8
+  - name: debian
 
 suites:
   - name: default
+    provisioner:
+      pillars:
+        openscap.sls:
+          openscap:
+            enabled: true
 
   - name: custom
     provisioner:
       pillars-from-files:
         openscap.sls: pillar-custom.sls
-      pillars:
-        top.sls:
-          base:
-            "*":
-              - openscap
