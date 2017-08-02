@@ -1,7 +1,7 @@
 # openscap-formula
 [![Build Status](https://travis-ci.org/ssplatt/openscap-formula.svg?branch=master)](https://travis-ci.org/ssplatt/openscap-formula)
 
-Install and manage OpenSCAP
+Install and manage OpenSCAP via Salt
 
  - https://www.open-scap.org/
  - https://wiki.debian.org/UsingSCAP
